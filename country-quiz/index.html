@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Unscramble Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 Country Unscramble</h1>
+            <p class="subtitle">Unscramble the letters to reveal the country!</p>
+        </header>
+
+        <div class="score-board">
+            <div class="score-item">
+                <span class="score-label">Score</span>
+                <span class="score-value" id="score">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Streak</span>
+                <span class="score-value" id="streak">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Best</span>
+                <span class="score-value" id="best-streak">0</span>
+            </div>
+        </div>
+
+        <div class="scramble-card">
+            <h2>Unscramble This Country</h2>
+            <div class="scrambled-letters" id="scrambled-letters">
+                <!-- Scrambled letters will appear here -->
+            </div>
+            <div class="letter-count" id="letter-count"></div>
+        </div>
+
+        <div class="guess-section">
+            <input
+                type="text"
+                id="guess-input"
+                placeholder="Type the country name..."
+                autocomplete="off"
+            >
+            <div class="button-row">
+                <button id="submit-btn" class="btn btn-primary">Submit</button>
+                <button id="shuffle-btn" class="btn btn-secondary">Reshuffle</button>
+                <button id="skip-btn" class="btn btn-tertiary">Skip</button>
+            </div>
+        </div>
+
+        <div class="result-section" id="result-section">
+            <div class="result-header" id="result-header"></div>
+            <div class="country-info">
+                <img id="flag-image" class="flag-image" src="" alt="Country Flag">
+                <div class="country-details">
+                    <div class="country-name" id="country-name"></div>
+                    <div class="capital-info">
+                        <span class="capital-label">Capital:</span>
+                        <span class="capital-name" id="capital-name"></span>
+                    </div>
+                </div>
+            </div>
+            <button id="next-btn" class="btn btn-primary btn-next">Next Country</button>
+        </div>
+    </div>
+
+    <script src="countries.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
